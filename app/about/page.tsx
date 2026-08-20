@@ -26,23 +26,21 @@ export default function AboutPage() {
           </div>
           <PageSection title="Our Story">
             <p>
-              AAM Partners LLC was founded with a simple mission: make online shopping easier for
-              families by bringing together quality products across every category in one trusted
-              marketplace. From electronics and home essentials to toys, beauty, and pet supplies —
-              we curate products that deliver real value.
+              GOULD GROUP ENTERPRISES LLC was built for everyday American shopping — bold selection,
+              practical upgrades, and real value across home, kitchen, tech, outdoor, beauty, and
+              family essentials. We curate products that make daily life work better.
             </p>
             <p className="mt-4">
-              Based in Virginia Beach, Virginia, we work with reliable suppliers to offer competitive
-              prices without compromising on quality. Every product in our catalog is selected with
-              care, and our team is dedicated to making your shopping experience smooth from browsing
-              to checkout.
+              Based in Houston, Texas, we partner with reliable suppliers to offer competitive prices
+              without compromising on quality. Every product in our catalog is selected with care, and
+              our team is dedicated to making your shopping experience smooth from browsing to checkout.
             </p>
           </PageSection>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: ShoppingBag, title: "Wide Selection", desc: "12+ categories covering everything your home and family needs." },
+            { icon: ShoppingBag, title: "Wide Selection", desc: "18 departments covering home, kitchen, tech, outdoor, and family needs." },
             { icon: Award, title: "Trusted Quality", desc: "Every product is carefully vetted for quality, value, and reliability." },
             { icon: Heart, title: "Customer First", desc: "30-day returns, responsive support, and a satisfaction guarantee." },
             { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout — no jumping between multiple stores." },

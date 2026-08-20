@@ -7,25 +7,23 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const homepageCategorySlugs = [
+  "home",
+  "kitchen",
   "electronics",
-  "home-kitchen",
-  "bathroom",
-  "educational-toys",
-  "pet-supplies",
   "beauty",
-  "sports-outdoors",
-  "office-supplies",
-  "fashion-accessories",
-  "baby-products",
+  "outdoor",
+  "office",
+  "sports",
+  "educational-toys",
 ];
 
 const gradientOverlays = [
-  "from-violet-600/80 to-purple-900/60",
+  "from-primary/85 to-dark/70",
   "from-amber-500/80 to-orange-600/60",
   "from-pink-500/80 to-rose-600/60",
   "from-blue-500/80 to-indigo-600/60",
   "from-emerald-500/80 to-teal-600/60",
-  "from-fuchsia-500/80 to-purple-600/60",
+  "from-secondary/75 to-primary/70",
   "from-cyan-500/80 to-blue-600/60",
   "from-orange-500/80 to-red-500/60",
   "from-rose-500/80 to-pink-600/60",

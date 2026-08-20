@@ -28,7 +28,7 @@ export function SectionHeading({
       )}
     >
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">{title}</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">{title}</h2>
         {subtitle && <p className="mt-2 text-muted-foreground">{subtitle}</p>}
       </div>
       {viewMoreLink && (

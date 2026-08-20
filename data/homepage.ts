@@ -1,20 +1,161 @@
 import {
+  Announcement,
   Feature,
   HeroSlide,
   PromoBanner,
 } from "@/types";
 
+export const announcement: Announcement = {
+  text: "New Arrivals + Weekly Deals",
+  ctaText: "Shop Now →",
+  ctaLink: "/shop",
+};
+
 export const heroSlides: HeroSlide[] = [
   {
     id: "1",
     image: "/hero/hero-1.jpg",
-    headline: "Everything Your Home Needs, All in One Place.",
+    headline: "EVERYDAY, UPGRADED.",
     description:
-      "Shop electronics, home essentials, toys, beauty products, kitchen accessories and more at prices you'll love.",
-    ctaText: "Shop Collection",
+      "Discover practical products, smart essentials and fresh finds for every part of your life.",
+    ctaText: "Shop Now",
     ctaLink: "/shop",
-    secondaryCtaText: "Today's Deals",
-    secondaryCtaLink: "/shop?sale=true",
+  },
+  {
+    id: "2",
+    image: "/hero/hero-2.jpg",
+    headline: "MAKE YOUR SPACE WORK BETTER.",
+    description:
+      "Home and workspace essentials designed to organize, brighten, and simplify your day.",
+    ctaText: "Explore Home",
+    ctaLink: "/categories/home",
+  },
+  {
+    id: "3",
+    image: "/hero/hero-3.jpg",
+    headline: "DEALS WORTH DISCOVERING.",
+    description:
+      "Promotions and bestsellers with real value — curated picks that feel worth it.",
+    ctaText: "Shop Deals",
+    ctaLink: "/shop?sale=true",
+  },
+];
+
+export const featuredDepartments = [
+  {
+    id: "1",
+    name: "Home",
+    slug: "home",
+    image: "/categories/home.jpg",
+    description: "Shelving, benches, and organizers for living spaces.",
+    size: "large" as const,
+  },
+  {
+    id: "2",
+    name: "Electronics",
+    slug: "electronics",
+    image: "/categories/electronics.jpg",
+    description: "Charging, hubs, and everyday tech utilities.",
+    size: "medium" as const,
+  },
+  {
+    id: "3",
+    name: "Kitchen",
+    slug: "kitchen",
+    image: "/categories/kitchen.jpg",
+    description: "Prep tools and countertop upgrades.",
+    size: "medium" as const,
+  },
+  {
+    id: "4",
+    name: "Office",
+    slug: "office",
+    image: "/categories/office.jpg",
+    description: "Desk systems that keep work clear.",
+    size: "small" as const,
+  },
+  {
+    id: "5",
+    name: "Beauty",
+    slug: "beauty",
+    image: "/categories/beauty.jpg",
+    description: "Vanity, organizers, and travel kits.",
+    size: "small" as const,
+  },
+  {
+    id: "6",
+    name: "Sports",
+    slug: "sports",
+    image: "/categories/sports.jpg",
+    description: "Training gear for active routines.",
+    size: "small" as const,
+  },
+  {
+    id: "7",
+    name: "Outdoor",
+    slug: "outdoor",
+    image: "/categories/outdoor.jpg",
+    description: "Coolers, lanterns, and camp tables.",
+    size: "small" as const,
+  },
+  {
+    id: "8",
+    name: "Toys & Family",
+    slug: "educational-toys",
+    image: "/categories/educational-toys.jpg",
+    description: "STEM kits and creative playsets.",
+    size: "small" as const,
+  },
+];
+
+export const shopByNeed = [
+  {
+    id: "1",
+    title: "Organize Your Home",
+    description: "Shelving, benches, and storage that reclaim every corner.",
+    image: "/banners/need-organize.jpg",
+    href: "/categories/home",
+    cta: "Shop Home",
+  },
+  {
+    id: "2",
+    title: "Upgrade Your Workspace",
+    description: "Stands, shelves, and organizers for focused workdays.",
+    image: "/banners/need-workspace.jpg",
+    href: "/categories/workspace",
+    cta: "Shop Workspace",
+  },
+  {
+    id: "3",
+    title: "Refresh Your Kitchen",
+    description: "Scales, kettles, and prep tools for smoother cooking.",
+    image: "/banners/need-kitchen.jpg",
+    href: "/categories/kitchen",
+    cta: "Shop Kitchen",
+  },
+  {
+    id: "4",
+    title: "Get Outside",
+    description: "Coolers, lanterns, and gear ready for weekends outdoors.",
+    image: "/banners/need-outdoor.jpg",
+    href: "/categories/outdoor",
+    cta: "Shop Outdoor",
+  },
+  {
+    id: "5",
+    title: "Tech For Everyday",
+    description: "Charging stations, hubs, and plugs that simplify devices.",
+    image: "/banners/need-tech.jpg",
+    href: "/categories/electronics",
+    cta: "Shop Tech",
+  },
+  {
+    id: "6",
+    title: "Family Favorites",
+    description: "STEM kits, nursery organizers, and shared household picks.",
+    image: "/banners/need-family.jpg",
+    href: "/categories/educational-toys",
+    cta: "Shop Family",
   },
 ];
 
@@ -41,74 +182,78 @@ export const features: Feature[] = [
     id: "4",
     icon: "headphones",
     title: "Customer Support",
-    description: "Our friendly team is available Mon–Fri to help with orders and questions.",
+    description: "Our Houston-based team is available Mon–Fri to help with orders.",
   },
   {
     id: "5",
     icon: "star",
     title: "Trusted Quality",
-    description: "Every product is carefully selected for quality, value, and reliability.",
+    description: "Every product is selected for value, durability, and everyday use.",
   },
 ];
 
 export const dealsEndTime = new Date(Date.now() + 1000 * 60 * 60 * 18).toISOString();
 
 export const homepageDealsSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
-  "air-fryer",
-  "dog-bed",
-  "bath-towel-set",
-  "sunglasses-classic",
-] as const;
-
-export const homepageBestsellerSlugs = [
-  "wireless-earbuds",
-  "bluetooth-speaker",
-  "bath-towel-set",
-  "yoga-mat",
-  "kids-learning-tablet",
-  "coffee-grinder",
-  "dog-bed",
-  "electric-kettle",
+  "modular-wall-shelf-system",
+  "glass-meal-prep-system",
+  "touchless-foaming-dispenser",
+  "usb-c-docking-hub",
+  "travel-makeup-train-case",
+  "percussion-massage-gun",
+  "matte-polarized-sport-sunglasses",
+  "low-noise-pet-grooming-kit",
 ] as const;
 
 export const homepageFeaturedSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
-  "bath-towel-set",
-  "kids-learning-tablet",
-  "standing-desk-lamp",
-  "air-fryer",
-  "yoga-mat",
-  "dog-bed",
-  "coffee-grinder",
-  "bluetooth-speaker",
+  "gooseneck-temp-kettle",
+  "nine-port-charging-station",
+  "trifold-led-vanity-mirror",
+  "elevated-pet-feeding-station",
+  "rotomolded-cooler-25qt",
+  "stem-circuit-lab-kit",
+  "rustproof-shower-shelf-tower",
+  "precision-kitchen-scale",
 ] as const;
 
 export const homepageNewArrivalSlugs = [
-  "stem-robot-kit",
-  "vitamin-c-serum-set",
-  "baby-monitor",
-  "foam-roller",
+  "rotating-entryway-valet",
+  "portable-fhd-display",
+  "rolling-file-caddy",
+  "speed-agility-training-kit",
+  "stroller-console-organizer",
+  "folding-camp-table-organizer",
+  "montessori-activity-board",
+  "rgb-corner-floor-lamp",
+] as const;
+
+export const homepageBestsellerSlugs = [
+  "precision-kitchen-scale",
+  "conical-burr-coffee-mill",
+  "vanity-drawer-organizer-set",
+  "foldable-laptop-riser",
+  "insulated-sport-bottle-32oz",
+  "water-repellent-crossbody-sling",
+  "nursery-caddy-organizer",
+  "rechargeable-camp-lantern",
 ] as const;
 
 export const promotionalBanner: PromoBanner = {
   id: "1",
-  title: "Upgrade Your Everyday Living",
+  title: "MAKE EVERYDAY BETTER.",
   description:
-    "Discover premium products for every room in your home, from smart electronics to comfortable essentials, all in one place.",
-  buttonText: "Shop Deals",
-  buttonLink: "/shop?sale=true",
-  image: "/banners/featured.jpg",
+    "Smart essentials, practical upgrades and products selected for the way you live.",
+  buttonText: "Explore The Collection",
+  buttonLink: "/shop",
+  image: "/banners/lifestyle.jpg",
 };
 
 export const aboutSection = {
   title: "Shopping Made Easy.",
   description:
-    "AAM Partners LLC brings together quality products across multiple categories, helping families find everything they need in one trusted online marketplace. We focus on affordability, reliability, and a smooth shopping experience from browsing to checkout.",
+    "GOULD GROUP ENTERPRISES LLC brings practical products across home, kitchen, tech, outdoor, and family essentials into one bold American marketplace. We focus on value, reliability, and a smooth shopping experience from browsing to checkout.",
   checklist: [
-    "Wide selection across 12+ categories",
+    "Wide selection across 18 departments",
     "Competitive prices on everyday essentials",
     "Fast, reliable shipping nationwide",
     "Dedicated customer support team",
@@ -119,24 +264,25 @@ export const aboutSection = {
 };
 
 export const featuredCollection = {
-  title: "Featured Products",
-  description:
-    "Hand-picked favorites across electronics, home, beauty, and more — everything you need in one marketplace.",
+  title: "Popular Right Now",
+  description: "Fresh marketplace favorites worth adding to your cart.",
   bannerImage: "/banners/featured.jpg",
-  categorySlug: "electronics",
+  categorySlug: "home",
 };
 
 export const bestSellerTabs = [
   { label: "All", slug: "all" },
+  { label: "Home", slug: "home" },
+  { label: "Kitchen", slug: "kitchen" },
   { label: "Electronics", slug: "electronics" },
-  { label: "Home & Kitchen", slug: "home-kitchen" },
   { label: "Beauty", slug: "beauty" },
-  { label: "Sports", slug: "sports-outdoors" },
+  { label: "Outdoor", slug: "outdoor" },
 ];
 
 export const newsletter = {
-  title: "Get Exclusive Deals Before Everyone Else",
-  description: "Subscribe for discounts, new arrivals, and weekly offers.",
+  title: "Don't Miss What's Next.",
+  description:
+    "Get new arrivals, exclusive offers and curated product picks delivered to your inbox.",
   placeholder: "Enter your email address",
   buttonText: "Subscribe",
 };

@@ -82,6 +82,12 @@ export interface PromoBanner {
   image: string;
 }
 
+export interface Announcement {
+  text: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
 export interface InstagramPost {
   id: string;
   image: string;

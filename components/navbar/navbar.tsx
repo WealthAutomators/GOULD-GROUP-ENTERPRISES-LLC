@@ -11,6 +11,12 @@ import { useWishlist } from "@/context/WishlistContext";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 
+/**
+ * Standalone fallback header (logo + nav + icons in a single row).
+ * The primary desktop chrome now lives in `site-header.tsx`, which is
+ * self-contained and does not use this component. Kept for any legacy
+ * imports so nothing breaks.
+ */
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -43,7 +49,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/85 transition-colors hover:bg-primary/5 hover:text-primary"
+                    className="rounded-lg px-3 py-2 text-sm font-bold text-foreground/85 transition-colors hover:bg-soft-section hover:text-secondary"
                   >
                     {link.label}
                   </Link>
@@ -53,7 +59,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary"
+                          className="block px-3 py-2 text-sm text-foreground hover:bg-soft-section hover:text-secondary"
                         >
                           {child.label}
                         </Link>
@@ -70,7 +76,7 @@ export function Navbar() {
               <Link href="/wishlist" aria-label="Wishlist">
                 <Heart className="h-[18px] w-[18px]" />
                 {wishlist.length > 0 && (
-                  <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white">
+                  <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-accent-foreground">
                     {wishlist.length}
                   </span>
                 )}
@@ -87,7 +93,7 @@ export function Navbar() {
               <Link href="/cart" aria-label="Cart">
                 <ShoppingBag className="h-[18px] w-[18px]" />
                 {itemCount > 0 && (
-                  <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
+                  <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-secondary text-[10px] font-bold text-white">
                     {itemCount}
                   </span>
                 )}
@@ -109,7 +115,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block rounded-lg px-3 py-2 text-sm font-medium hover:bg-muted"
+                    className="block rounded-lg px-3 py-2 text-sm font-bold hover:bg-soft-section hover:text-secondary"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -120,7 +126,7 @@ export function Navbar() {
                         <li key={child.href}>
                           <Link
                             href={child.href}
-                            className="block rounded-lg px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-primary"
+                            className="block rounded-lg px-3 py-1.5 text-sm text-muted-foreground hover:bg-soft-section hover:text-secondary"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.label}

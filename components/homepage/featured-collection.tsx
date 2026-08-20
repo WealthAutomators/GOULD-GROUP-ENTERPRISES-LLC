@@ -16,7 +16,7 @@ export function FeaturedCollection() {
         <SectionHeading
           title={featuredCollection.title}
           subtitle={featuredCollection.description}
-          viewMoreLink={`/categories/${featuredCollection.categorySlug}`}
+          viewMoreLink="/shop"
         />
         <Carousel slidesToShow={5} className="px-8">
           {products.map((product) => (

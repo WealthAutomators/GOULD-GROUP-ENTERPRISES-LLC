@@ -82,7 +82,10 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
             </Badge>
           )}
           {product.badge && !hasDiscount && (
-            <Badge variant="sale" className="absolute left-3 top-3">
+            <Badge
+              variant={product.badge === "New" ? "new" : product.badge === "Hot" ? "hot" : "sale"}
+              className="absolute left-3 top-3"
+            >
               {product.badge}
             </Badge>
           )}

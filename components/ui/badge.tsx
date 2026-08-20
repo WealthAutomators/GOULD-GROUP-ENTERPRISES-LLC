@@ -9,8 +9,11 @@ const badgeVariants = cva(
       variant: {
         default: "bg-primary text-white",
         secondary: "bg-muted text-muted-foreground",
-        sale: "bg-accent text-white",
+        sale: "bg-secondary text-white",
+        accent: "bg-accent text-accent-foreground",
         outline: "border border-border text-foreground",
+        new: "bg-primary text-white",
+        hot: "bg-secondary text-white",
       },
     },
     defaultVariants: {

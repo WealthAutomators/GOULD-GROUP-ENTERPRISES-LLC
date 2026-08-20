@@ -2,9 +2,9 @@ import { company } from "./company";
 
 export const faqItems = [
   {
-    question: "What types of products does AAM Partners LLC sell?",
+    question: "What types of products does GOULD GROUP ENTERPRISES LLC sell?",
     answer:
-      "We offer a wide range of products across 12+ categories including electronics, home & kitchen, bathroom essentials, beauty & personal care, toys & games, pet supplies, sports & outdoors, office supplies, health & wellness, baby products, and fashion accessories.",
+      "We offer a wide range of products across home, kitchen, bathroom, electronics, office, workspace, beauty, sports, gaming, fashion, baby, pet, health, outdoor, travel, educational toys, storage, and lighting — a true everyday American marketplace.",
   },
   {
     question: "Do you offer free shipping?",
@@ -14,7 +14,7 @@ export const faqItems = [
   {
     question: "How long does shipping take?",
     answer:
-      "Standard shipping delivers in 3–5 business days. Express shipping delivers in 1–2 business days. Orders placed before 2pm EST on business days ship the same day. You'll receive a tracking number via email once your order ships.",
+      "Standard shipping delivers in 3–5 business days. Express shipping delivers in 1–2 business days. Orders placed before 2pm CST on business days ship the same day. You'll receive a tracking number via email once your order ships.",
   },
   {
     question: "What is your return policy?",
@@ -49,18 +49,18 @@ export const faqItems = [
   {
     question: "How can I contact customer support?",
     answer:
-      `Our support team is available Monday through Friday, 9am–6pm EST. Email us at ${company.email} or use the contact form on our website. We typically respond within one business day.`,
+      `Our support team is available Monday through Friday, 9am–6pm CST. Email us at ${company.email} or use the contact form on our website. We typically respond within one business day.`,
   },
 ];
 
 export const shippingPolicy = {
   title: "Shipping Policy",
-  description: "Everything you need to know about how we deliver your AAM Partners LLC orders.",
+  description: "Everything you need to know about how we deliver your GOULD GROUP ENTERPRISES LLC orders.",
   sections: [
     {
       title: "Processing Time",
       content:
-        "Orders are processed within 1–2 business days. Orders placed before 2:00 PM EST Monday through Friday ship the same day. Orders placed on weekends or holidays ship the next business day.",
+        "Orders are processed within 1–2 business days. Orders placed before 2:00 PM CST Monday through Friday ship the same day. Orders placed on weekends or holidays ship the next business day.",
     },
     {
       title: "Shipping Methods & Rates",
@@ -90,7 +90,7 @@ export const shippingPolicy = {
 
 export const returnPolicy = {
   title: "Return Policy",
-  description: "We want you to love every AAM Partners LLC purchase. If you're not satisfied, we're here to help.",
+  description: "We want you to love every GOULD GROUP ENTERPRISES LLC purchase. If you're not satisfied, we're here to help.",
   sections: [
     {
       title: "30-Day Return Window",
@@ -128,7 +128,7 @@ export const returnPolicy = {
 
 export const refundPolicy = {
   title: "Refund Policy",
-  description: "Our commitment to fair and transparent refunds for every AAM Partners LLC order.",
+  description: "Our commitment to fair and transparent refunds for every GOULD GROUP ENTERPRISES LLC order.",
   sections: [
     {
       title: "Refund Eligibility",
@@ -156,14 +156,14 @@ export const refundPolicy = {
     },
     {
       title: "Contact Us",
-      content: `Questions about refunds? Reach our team at ${company.email} Monday through Friday, 9am–6pm EST.`,
+      content: `Questions about refunds? Reach our team at ${company.email} Monday through Friday, 9am–6pm CST.`,
     },
   ],
 };
 
 export const privacyPolicy = {
   title: "Privacy Policy",
-  description: "Last updated: January 1, 2026. How AAM Partners LLC collects, uses, and protects your information.",
+  description: "Last updated: January 1, 2026. How GOULD GROUP ENTERPRISES LLC collects, uses, and protects your information.",
   sections: [
     {
       title: "Information We Collect",
@@ -195,7 +195,7 @@ export const privacyPolicy = {
     {
       title: "Your Rights",
       content:
-        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". Virginia residents have additional rights under applicable state privacy laws.",
+        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". Texas residents have additional rights under applicable state privacy laws.",
     },
     {
       title: "Contact",
@@ -206,12 +206,12 @@ export const privacyPolicy = {
 
 export const termsPolicy = {
   title: "Terms & Conditions",
-  description: "Please read these terms carefully before using the AAM Partners LLC website.",
+  description: "Please read these terms carefully before using the GOULD GROUP ENTERPRISES LLC website.",
   sections: [
     {
       title: "Acceptance of Terms",
       content:
-        "By accessing and using the AAM Partners LLC website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.",
+        "By accessing and using the GOULD GROUP ENTERPRISES LLC website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.",
     },
     {
       title: "Products & Pricing",
@@ -226,17 +226,17 @@ export const termsPolicy = {
     {
       title: "Intellectual Property",
       content:
-        "All content on this website — including text, images, logos, and design — is the property of AAM Partners LLC and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.",
+        "All content on this website — including text, images, logos, and design — is the property of GOULD GROUP ENTERPRISES LLC and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.",
     },
     {
       title: "Limitation of Liability",
       content:
-        "AAM Partners LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
+        "GOULD GROUP ENTERPRISES LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
     },
     {
       title: "Governing Law",
       content:
-        "These terms are governed by the laws of the Commonwealth of Virginia, United States. Any disputes shall be resolved in the courts of Virginia Beach, Virginia.",
+        "These terms are governed by the laws of the State of Texas, United States. Any disputes shall be resolved in the courts of Houston, Texas.",
     },
   ],
 };

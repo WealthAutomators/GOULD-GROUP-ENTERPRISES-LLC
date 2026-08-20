@@ -1,4 +1,8 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { promotionalBanner } from "@/data/homepage";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -7,19 +11,35 @@ export function PromotionalBanner() {
   return (
     <section className="py-12 md:py-16">
       <Container>
-        <div className="relative overflow-hidden rounded-xl shadow-md">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-purple-900" />
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/5" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-white/5" />
-          <div className="absolute right-1/4 top-1/2 h-32 w-32 -translate-y-1/2 rotate-45 bg-accent/10" />
-          <div className="relative flex flex-col items-start justify-center p-8 md:p-12 lg:p-16">
-            <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl lg:text-4xl">
-              {promotionalBanner.title}
-            </h2>
-            <p className="mt-4 max-w-xl text-white/85 leading-relaxed">{promotionalBanner.description}</p>
-            <Button asChild size="lg" variant="accent" className="mt-8">
-              <Link href={promotionalBanner.buttonLink}>{promotionalBanner.buttonText}</Link>
-            </Button>
+        <div className="relative overflow-hidden rounded-2xl border border-border min-h-[340px] md:min-h-[420px]">
+          <Image
+            src={promotionalBanner.image}
+            alt={promotionalBanner.title}
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/35" />
+          <div className="absolute right-8 top-8 h-16 w-16 rotate-12 rounded-md bg-secondary/80" />
+          <div className="absolute bottom-10 right-16 h-10 w-10 rounded-full bg-accent/90" />
+          <div className="relative flex h-full min-h-[340px] flex-col items-start justify-center p-8 md:min-h-[420px] md:p-12 lg:p-16">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45 }}
+              className="max-w-xl"
+            >
+              <h2 className="text-3xl font-extrabold uppercase tracking-tight text-white md:text-4xl lg:text-5xl">
+                {promotionalBanner.title}
+              </h2>
+              <p className="mt-4 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
+                {promotionalBanner.description}
+              </p>
+              <Button asChild size="lg" className="mt-8 bg-white text-primary hover:bg-secondary hover:text-white">
+                <Link href={promotionalBanner.buttonLink}>{promotionalBanner.buttonText}</Link>
+              </Button>
+            </motion.div>
           </div>
         </div>
       </Container>
