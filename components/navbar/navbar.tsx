@@ -72,7 +72,7 @@ export function Navbar() {
           </nav>
 
           <div className="ml-auto flex items-center gap-0.5 sm:gap-1">
-            <Button variant="ghost" size="icon" asChild className="relative h-9 w-9">
+            <Button variant="ghost" size="icon" asChild className="hidden sm:inline-flex relative h-9 w-9">
               <Link href="/wishlist" aria-label="Wishlist">
                 <Heart className="h-[18px] w-[18px]" />
                 {wishlist.length > 0 && (
@@ -83,7 +83,7 @@ export function Navbar() {
               </Link>
             </Button>
 
-            <Button variant="ghost" size="icon" asChild className="h-9 w-9">
+            <Button variant="ghost" size="icon" asChild className="hidden sm:inline-flex h-9 w-9">
               <Link href="/profile" aria-label="Log in">
                 <User className="h-[18px] w-[18px]" />
               </Link>
@@ -137,6 +137,10 @@ export function Navbar() {
                   )}
                 </li>
               ))}
+              <li data-mobile-extra className="mt-2 flex gap-2 border-t border-border pt-3 sm:hidden">
+                <Link href="/wishlist" onClick={() => setMobileOpen(false)} className="flex-1 rounded-md border border-border px-3 py-2 text-center text-sm font-medium hover:bg-muted">Wishlist</Link>
+                <Link href="/account" onClick={() => setMobileOpen(false)} className="flex-1 rounded-md border border-border px-3 py-2 text-center text-sm font-medium hover:bg-muted">Account</Link>
+              </li>
             </ul>
           </Container>
         </div>
