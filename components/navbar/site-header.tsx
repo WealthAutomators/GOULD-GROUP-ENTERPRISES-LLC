@@ -52,7 +52,7 @@ export function SiteHeader() {
             </div>
 
             <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-2">
-              <Button variant="ghost" size="icon" asChild className="relative h-10 w-10">
+              <Button variant="ghost" size="icon" asChild className="hidden sm:inline-flex relative h-10 w-10">
                 <Link href="/wishlist" aria-label="Wishlist">
                   <Heart className="h-[18px] w-[18px]" />
                   {wishlist.length > 0 && (
@@ -63,7 +63,7 @@ export function SiteHeader() {
                 </Link>
               </Button>
 
-              <Button variant="ghost" size="icon" asChild className="h-10 w-10">
+              <Button variant="ghost" size="icon" asChild className="hidden sm:inline-flex h-10 w-10">
                 <Link href="/profile" aria-label="Account">
                   <User className="h-[18px] w-[18px]" />
                 </Link>
@@ -133,6 +133,8 @@ export function SiteHeader() {
                   </Link>
                 </li>
               ))}
+                          <li data-mobile-extra className="sm:hidden"><Link href="/wishlist" className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground" onClick={() => setMobileOpen(false)}>Wishlist</Link></li>
+              <li data-mobile-extra className="sm:hidden"><Link href="/profile" className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground" onClick={() => setMobileOpen(false)}>Account</Link></li>
             </ul>
             <div className="my-3 border-t border-border" />
             <ul className="space-y-0.5">
